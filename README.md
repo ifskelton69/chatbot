@@ -1,16 +1,54 @@
-# React + Vite
+AI Chatbot Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An AI-powered chatbot application that enables real-time conversations using modern web technologies and state-of-the-art language models from Hugging Face.
 
-Currently, two official plugins are available:
+This project supports both a web-based chat interface and optional integration with Discord, allowing users to interact with the bot across multiple platforms.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+✨ Features
+💬 Real-time chat system using Express.js
+🧠 AI-generated responses via Hugging Face Inference API
+🔐 Secure API handling using environment variables
+🌐 RESTful API endpoints (/chat, /messages)
+📦 In-memory message storage
+🤖 Optional Discord bot integration
+⚡ Fast and lightweight backend architecture 
 
-## React Compiler
+🛠️ Tech Stack
+Backend: Node.js, Express.js
+AI Model: LLaMA / Hugging Face Inference API
+API Calls: node-fetch
+Environment Management: dotenv
+Optional Integration: Discord Bot
+📡 API Endpoints
+Method	Endpoint	Description
+GET	/messages	Get all chat messages
+POST	/messages	Add a message
+POST	/chat	Send message & get AI response
+DELETE	/messages	Clear chat history
+GET	/health	Server health check
+🔄 How It Works
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+User sends a message
+Backend receives input via /chat
+Request is sent to Hugging Face model
+AI generates response
+Response is stored and returned
+🔐 Environment Variables
 
-## Expanding the ESLint configuration
+Create a .env file:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## HUGGINGFACE_TOKEN=your_token_here
+## DISCORD_TOKEN=your_discord_token (optional)
+
+▶️ Run Locally
+## git clone <your-repo-url>
+## cd chatbot-app
+## npm install
+## npm run dev
+
+📈 Future Improvements
+🧠 Chat memory (context-based responses)
+🎨 Frontend UI (React + Tailwind)
+⚡ Streaming responses
+☁️ Deployment (Render / Vercel)
+🔍 Resume screening integration (AI-based)
