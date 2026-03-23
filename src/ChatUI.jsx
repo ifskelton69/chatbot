@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 
-const API_BASE = "http://localhost:5000";
+const API_BASE = "https://chatbot-sever.onrender.com";
 const POLL_INTERVAL = 2000;
 
 function parseMarkdown(text) {
