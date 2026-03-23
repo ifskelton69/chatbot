@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router"
-import ChatUI from "./chatui"
+import ChatUI from "./ChatUI";
 const App = () => {
   return (
     <div>
